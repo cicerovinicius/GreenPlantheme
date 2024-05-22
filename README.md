@@ -1,9 +1,6 @@
-# GreenPlantheme
-Criador de temas
-
 # GreenPlantheme - Desafio
 
-Desafio desenvolvido por Cicero Vinicius, utilizando HTML, CSS, SCSS, javascript puro e o webpack para melhor organizar os assets (css/scss, imagens e js).
+Criador de temas desenvolvido por Cicero Vinicius, utilizando HTML, CSS, SCSS, javascript puro e o webpack para melhor organizar os assets (css/scss, imagens e js).
 Os assets podem ser encontrados na pasta "src" (NÃO minificados) e "dist" (minificados);
 
 Para baixar as dependências é só utilizar:
