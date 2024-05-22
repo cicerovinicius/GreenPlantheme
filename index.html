@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <link rel="canonical" href="/" />
+    <title>GreenPlanthemes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <script type="application/javascript" src="dist/js/app.min.js"></script>
+  </head>
+  <body>
+    <section id="hero" class="primary">
+      <div class="fundo primary"></div>
+      <div class="content">
+        <div class="title-area">
+          <a href="#" class="logo-link">
+            <img
+              src="dist/images/green-thumb-logo.png"
+              alt="Logo da GreenPlanthemes, uma loja de temas para seu site"
+              title="GreenPlantheme"
+            />
+          </a>
+          <h1
+            class="title"
+            title="GreenPlantheme, uma loja de temas para seu site"
+          >
+            Plante uma cor, <br />colha um <br />tema
+          </h1>
+          <a href="#results"
+            class="arrow-btn anchor"
+            title="Clique para ver os temas"
+          ></a>
+        </div>
+        <div class="img-area"></div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="divisor secondary"></div>
+
+      <div class="content">
+        <div class="title-area">
+          <h3
+            class="title"
+            title="Selecione o tema que mais se identifica"
+          >
+            Listagem de Temas
+          </h3>
+        </div>
+
+        <div id="busca" class="primary">
+          <input type="text" id="buscaNome" name="nome" placeholder="Busque um tema por nome..." />
+          <button class="primary" onclick="buscarTemas()"><svg id="search-icon" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M41.472 33.8853L34.3947 26.808C35.6815 24.2344 36.5393 21.2319 36.5393 18.2294C36.5393 8.14962 28.3897 0 18.3099 0C8.23008 0 0.0804443 8.14962 0.0804443 18.2294C0.0804443 28.3092 8.23008 36.4588 18.3099 36.4588C21.3124 36.4588 24.3149 35.601 26.8885 34.3142L33.9658 41.3915C36.1104 43.5362 39.3274 43.5362 41.472 41.3915C43.4022 39.2469 43.4022 36.0299 41.472 33.8853ZM18.3099 32.1696C10.5892 32.1696 4.36973 25.9501 4.36973 18.2294C4.36973 10.5087 10.5892 4.28928 18.3099 4.28928C26.0306 4.28928 32.2501 10.5087 32.2501 18.2294C32.2501 25.9501 26.0306 32.1696 18.3099 32.1696Z" fill="#FFF"></path>
+          </svg></button>
+        </div>
+
+        <ul id="results-area" class="temas"></ul>
+      </div>
+    </section>
+    
+    <div id="sidenavBackdrop" onclick="fecharSideNav()"></div>
+    <div id="sideNav">
+      <div class="conteudo">
+        <h3 id="tituloSideNav" title="Cadastrar Tema">Cadastrar Tema</h3>
+        <form id="formEditar" action="#" class="form">
+          <input type="hidden" name="modo" id="modo" value="1" />
+          <input type="hidden" name="id" id="temaId" value="" />
+          <div class="input">
+            <label for="color-picker">Nome:</label>
+            <input type="text" id="nome" name="nome" />
+          </div>
+          <p>Selecione as cores para cada uma dessas opções:</p>
+          <div class="cores">
+            <div class="input">
+              <label for="color-picker-primary">Primária (Primary):</label>
+              <input type="color" value="#ffffff" id="color-picker-primary" name="primary" />
+            </div>
+            <div class="input">
+              <label for="color-picker-secondary">Secundária (Secondary):</label>
+              <input type="color" value="#ffffff" id="color-picker-secondary" name="secondary" />
+            </div>
+            <div class="input">
+              <label for="color-picker-success">Sucesso (Success):</label>
+              <input type="color" value="#ffffff" id="color-picker-success" name="success" />
+            </div>
+            <div class="input">
+              <label for="color-picker-danger">Perigo (Danger):</label>
+              <input type="color" value="#ffffff" id="color-picker-danger" name="danger" />
+            </div>
+            <div class="input">
+              <label for="color-picker-warning">Alerta (Warning):</label>
+              <input type="color" value="#ffffff" id="color-picker-warning" name="warning"/>
+            </div>
+          </div>
+
+          <div class="botao">
+            <a onclick="fecharSideNav()">Cancelar</a>
+            <button class="success">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <button title="Cadastrar Tema" id="addButton" class="primary" onclick="cadastrarTema()">
+      <i class="material-icons">add</i>
+    </button>
+
+    <footer id="rodape">
+      <div class="content">
+        <div class="col-logo">
+          <a href="#" title="GreenPlanthemes">
+            <img
+              src="dist/images/green-thumb-logo.png"
+              class="img-fluid"
+              style="max-width: 250px"
+              alt="Logo da GreenPlanthemes"
+              title="GreenPlanthemes, sua loja de temas"
+            />
+          </a>
+        </div>
+
+        <div class="copyright">
+          <p>
+            <a
+              href="https://www.linkedin.com/in/cicerovinicius/"
+              target="_blank"
+              title="Teste desenvolvido por Cicero Vinicius"
+              >Cicero Vinicius</a> - Todos os Direitos Reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="application/javascript" >
+      function buscarTemas(){
+        let nome = document.getElementById('buscaNome').value;
+        if(nome) app.functions.buscarTemas(nome);
+        else app.functions.buscarTemas('');
+      }
+
+      function aplicarTema(id){
+        app.functions.aplicarTema(id);
+      }
+
+      function cadastrarTema(){
+        app.functions.cadastrarTema();
+      }
+      function editarTema(id){
+        app.functions.editarTema(id);
+      }
+      function fecharSideNav(){
+        app.functions.fecharSideNav();
+      }
+
+      function salvarTema(event){
+        event.preventDefault();
+        let id = 1;
+        let modo = document.getElementById('modo').value;
+
+        if(modo == 1) id = app.functions.gerarId();
+        else id = document.getElementById('temaId').value;
+
+        app.functions.salvarTema({
+          id: id,
+          name: document.getElementById('nome').value,
+          colors: {
+            primary: document.getElementById('color-picker-primary').value,
+            secondary: document.getElementById('color-picker-secondary').value,
+            success: document.getElementById('color-picker-success').value,
+            danger: document.getElementById('color-picker-danger').value,
+            warning: document.getElementById('color-picker-warning').value
+          }
+        });
+      }
+
+      function removerTema(id){
+        app.functions.removerTema(id);
+      }
+
+      let form = document.getElementById("formEditar");
+      form.addEventListener('submit', salvarTema);
+    </script>
+  </body>
+</html>

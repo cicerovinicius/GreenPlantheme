@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Tema Azul",
+    "colors": {
+      "primary": "#007bff",
+      "secondary": "#6c757d",
+      "success": "#28a745",
+      "danger": "#dc3545",
+      "warning": "#ffc107"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Tema Verde",
+    "colors": {
+      "primary": "#28a745",
+      "secondary": "#6c757d",
+      "success": "#218838",
+      "danger": "#c82333",
+      "warning": "#ffc107"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Tema Tons de Verde",
+    "colors": {
+      "primary": "#006769",
+      "secondary": "#40A578",
+      "success": "#9DDE8B",
+      "danger": "#EE4E4E",
+      "warning": "#E6FF94"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Tema Pastel",
+    "colors": {
+      "primary": "#FF90BC",
+      "secondary": "#FFC0D9",
+      "success": "#8ACDD7",
+      "danger": "#ba5b80",
+      "warning": "#F9F9E0"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Tema Colorido",
+    "colors": {
+      "primary": "#59D5E0",
+      "secondary": "#F5DD61",
+      "success": "#41ce92",
+      "danger": "#F4538A",
+      "warning": "#FAA300"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Tema & Belo",
+    "colors": {
+      "primary": "#161853",
+      "secondary": "#292C6D",
+      "success": "#363193",
+      "danger": "#EC255A",
+      "warning": "#FAEDF0"
+    }
+  }
+]
