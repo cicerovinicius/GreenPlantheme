@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+@import 'root';
+@import 'base';
+
+
+// Parts include ========
+@import 'includes/hero';
+@import 'includes/busca';
+@import 'includes/temas';
+@import 'includes/sidenav';
+@import 'includes/addButton';
+@import 'includes/footer';

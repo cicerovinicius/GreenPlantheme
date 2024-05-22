@@ -1,0 +1,12 @@
+.divisor{
+  background: #093323;
+  margin: 0 0 2em;
+  width: 100%;
+
+  &.primary{
+    height: 5px;
+  }
+  &.secondary{
+    height: 15px;
+  }
+}

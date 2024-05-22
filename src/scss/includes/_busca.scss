@@ -1,0 +1,38 @@
+#busca {
+  background: #cecece;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: 59px;
+
+  input{
+    background: $white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    height: 55px;
+    width: calc(100% - 4px);
+    max-width: calc(100% - 4px);
+    padding: 15px 0 15px 15px;
+  }
+
+  button{
+    background: #75bc97;
+    border: none;
+    border-radius: 6px;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    right: 8px;
+    width: 40px;
+
+    svg{
+      width: 85%;
+      height: 85%;
+    }
+  }
+}

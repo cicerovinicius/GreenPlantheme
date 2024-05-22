@@ -1,0 +1,30 @@
+#rodape {
+  background: $black;
+  color: $white;
+  font-size: 0.8em;
+  padding: 15px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $green_light;
+    }
+  }
+
+  @media(max-width: 549px){
+    .content{
+      justify-content: center;
+
+      .col-logo{
+        order: 1;
+      }
+    }
+  }
+}

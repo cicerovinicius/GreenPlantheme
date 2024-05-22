@@ -1,0 +1,209 @@
+#results {
+  background: #f6f6f6;
+  height: auto;
+  max-height: none;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  .title-area {
+    margin-bottom: 35px;
+    width: 100%;
+
+    .title {
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2.5em;
+      letter-spacing: -1px;
+      line-height: 1.2em;
+      text-align: center;
+    }
+  }
+
+  #results-area {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 3em;
+    width: calc(100% + 20px);
+
+    .result {
+      width: 25%;
+
+      .wrap {
+        background: $white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        padding: 12px;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+
+        .img {
+          background: $green_light;
+          border-radius: 4px;
+          height: 200px;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+
+          &, span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          img {
+            min-width: 100%;
+            margin: auto;
+            margin-left: -50%;
+            margin-top: -40%;
+            opacity: 0.7;
+            position: relative;
+            transform: translateX(50%);
+          }
+
+          span{
+            color: $white;
+            font-size: 1.5em;
+            font-weight: 700;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        .name{
+          color: #333333;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1em;
+          line-height: 1.8em;
+          padding-top: 7px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .botoes {
+          display: flex;
+          flex-direction: column;
+          width: 40px;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+
+          .botao {
+            border-radius: 4px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            margin-bottom: 5px;
+
+            &.edit {
+              background: #2196f3;
+            }
+            &.delete {
+              background: #f44336;
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px #e8e8e8;
+          z-index: 2;
+          transform: scale(1.1);
+
+          .img{
+            background: $black !important;
+
+            img{
+              opacity: 0.2;
+            }
+            span{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .tema {
+      &.applied {
+        .botoes {
+          .delete {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content {
+      padding: 2em 0 2em;
+    }
+    .title-area {
+      padding: 0 30px;
+
+      .title {
+        font-size: 1.8em;
+        line-height: 1.1em;
+
+        &:before {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    #busca{
+      max-width: calc(100% - 40px);
+      margin: 0 auto 1em;
+    }
+
+    #results-area {
+      margin: 0;
+      padding: 0px 10px;
+      width: 100%;
+
+      .result {
+        padding: 0;
+        width: 50% !important;
+
+        .wrap {
+          transform: none !important;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .title-area {
+      padding-top: 1.5em;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    #results-area {
+      .result {
+        width: 33.33% !important;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    #results-area {
+      .result {
+        width: 25% !important;
+      }
+    }
+  }
+}
