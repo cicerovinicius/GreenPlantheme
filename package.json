@@ -1,7 +1,7 @@
 {
   "name": "theme-packer",
   "version": "1.0.0",
-  "description": "",
+  "description": "criador de temas a partir de cores",
   "main": "index.js",
   "devDependencies": {
     "cross-env": "^7.0",
